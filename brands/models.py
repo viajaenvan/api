@@ -5,7 +5,7 @@ from django.utils import timezone
 
 class Brand(models.Model):
     name = models.CharField(max_length=150, unique=True)
-    img_logo = models.ImageField(upload_to='brands/images/')
+    img_logo = models.ImageField(upload_to='brands')
     create_date = models.DateTimeField(default=timezone.now, editable=False)
     author = models.ForeignKey(
         get_user_model(),
