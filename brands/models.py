@@ -2,7 +2,6 @@ from django.db import models
 from django.contrib.auth import get_user_model
 from django.utils import timezone
 
-
 class Brand(models.Model):
     name = models.CharField(max_length=150, unique=True)
     img_logo = models.ImageField(upload_to='brands')
